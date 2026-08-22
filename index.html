@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jibon Suraksha Assam | Natural Disaster Awareness</title>
+
+<style>
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --green: #087443;
+    --green-dark: #04512e;
+    --green-light: #dff5e9;
+    --blue: #087ea4;
+    --blue-dark: #07536b;
+    --orange: #f28c28;
+    --yellow: #ffd166;
+    --red: #d9534f;
+    --white: #ffffff;
+    --black: #14201a;
+    --gray: #66756d;
+    --light: #f5f9f7;
+    --border: #dce8e1;
+    --shadow: 0 15px 40px rgba(10, 66, 43, 0.10);
+    --radius: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--green-dark);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #34443b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.menu-btn {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 28px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 720px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,.22), transparent 20%),
+        linear-gradient(135deg, #043d27 0%, #087443 45%, #087ea4 100%);
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    right: -200px;
+    bottom: -300px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: -200px;
+    top: 50px;
+    border-radius: 50%;
+    background: rgba(255,209,102,.08);
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 80px 25px;
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.25);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.02;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--yellow);
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 18px;
+    color: rgba(255,255,255,.88);
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 12px;
+    border: none;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.btn-primary {
+    background: var(--yellow);
+    color: #263a2d;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255,209,102,.25);
+}
+
+.btn-outline {
+    color: white;
+    border: 1px solid rgba(255,255,255,.4);
+    background: rgba(255,255,255,.08);
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--green-dark);
+}
+
+/* Hero Visual */
+
+.hero-visual {
+    position: relative;
+    height: 470px;
+}
+
+.hero-card {
+    position: absolute;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0,0,0,.2);
+}
+
+.main-visual {
+    inset: 40px 20px 40px 20px;
+
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.4)),
+        linear-gradient(135deg, #62b4a5, #116c91 45%, #194e3d);
+
+    display: flex;
+    align-items: end;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.main-visual::before {
+    content: "🌊";
+    position: absolute;
+    font-size: 170px;
+    right: 20px;
+    top: 80px;
+    opacity: .45;
+}
+
+.visual-content {
+    position: relative;
+    z-index: 2;
+}
+
+.visual-content h3 {
+    font-size: 27px;
+}
+
+.visual-content p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.floating-card {
+    background: white;
+    color: var(--black);
+    padding: 17px;
+    width: 190px;
+}
+
+.floating-one {
+    top: 0;
+    left: -15px;
+}
+
+.floating-two {
+    right: -15px;
+    bottom: 10px;
+}
+
+.floating-number {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--green);
+}
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.section {
+    padding: 100px 25px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-header {
+    max-width: 720px;
+    margin-bottom: 50px;
+}
+
+.section-label {
+    color: var(--green);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: clamp(32px, 5vw, 50px);
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: var(--gray);
+}
+
+/* =========================================================
+   DISASTER CARDS
+========================================================= */
+
+.disaster-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.disaster-card {
+    background: white;
+    padding: 25px 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: .3s;
+}
+
+.disaster-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+}
+
+.disaster-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    font-size: 27px;
+    background: var(--green-light);
+    margin-bottom: 18px;
+}
+
+.disaster-card h3 {
+    margin-bottom: 8px;
+}
+
+.disaster-card p {
+    font-size: 13px;
+    color: var(--gray);
+}
+
+/* =========================================================
+   DUAL TRACK
+========================================================= */
+
+.dual-section {
+    background: #edf7f2;
+}
+
+.track-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 50px;
+    background: white;
+    color: var(--gray);
+    font-weight: 700;
+}
+
+.tab.active {
+    background: var(--green);
+    color: white;
+}
+
+.track-content {
+    display: none;
+}
+
+.track-content.active {
+    display: block;
+}
+
+.track-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 28px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.info-card .big-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.action-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.action-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #edf0ee;
+    font-size: 14px;
+}
+
+.action-list li::before {
+    content: "✓";
+    color: var(--green);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* =========================================================
+   THREE STEP
+========================================================= */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid var(--border);
+}
+
+.step-number {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 60px;
+    font-weight: 900;
+    color: #eef5f0;
+}
+
+.step-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+/* =========================================================
+   SMART SOLUTIONS
+========================================================= */
+
+.smart-section {
+    background: #082f24;
+    color: white;
+}
+
+.smart-section .section-description {
+    color: #bdd2c9;
+}
+
+.smart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.smart-card {
+    padding: 30px;
+    border-radius: 22px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.12);
+    transition: .3s;
+}
+
+.smart-card:hover {
+    background: rgba(255,255,255,.11);
+    transform: translateY(-5px);
+}
+
+.smart-icon {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.smart-card p {
+    color: #bdd2c9;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* =========================================================
+   PREPAREDNESS KIT
+========================================================= */
+
+.prep-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.prep-box {
+    background: linear-gradient(145deg, #e8f6ef, #d8edf6);
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.kit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.kit-item {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+/* =========================================================
+   COMMUNITY HONOR
+========================================================= */
+
+.honor-section {
+    background: #fffaf0;
+}
+
+.honor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.person-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,.06);
+}
+
+.person-photo {
+    height: 230px;
+    background:
+        linear-gradient(135deg, #158f65, #116e91);
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 70px;
+}
+
+.person-info {
+    padding: 22px;
+}
+
+.person-info small {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.person-info p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* =========================================================
+   APPRECIATION
+========================================================= */
+
+.appreciation {
+    background: linear-gradient(135deg, #f7c948, #f28c28);
+    padding: 70px 25px;
+    color: #3d2b08;
+}
+
+.appreciation-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.appreciation h2 {
+    font-size: clamp(35px, 5vw, 58px);
+    margin-bottom: 18px;
+}
+
+.appreciation p {
+    font-size: 17px;
+}
+
+.quote {
+    margin-top: 30px;
+    background: rgba(255,255,255,.25);
+    padding: 25px;
+    border-radius: 18px;
+    font-style: italic;
+}
+
+/* =========================================================
+   IDEA HUB
+========================================================= */
+
+.idea-layout {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 40px;
+}
+
+.idea-intro {
+    padding-right: 30px;
+}
+
+.idea-form {
+    background: white;
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    padding: 13px 15px;
+    border-radius: 11px;
+    outline: none;
+    background: #fbfdfc;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--green);
+}
+
+.upload-box {
+    border: 2px dashed #b7ccc0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 18px;
+}
+
+#photoPreview {
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 12px;
+    display: none;
+}
+
+/* =========================================================
+   COMMUNITY IDEAS
+========================================================= */
+
+.idea-list {
+    margin-top: 45px;
+}
+
+.idea-item {
+    background: white;
+    padding: 22px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.idea-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 50px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.vote-btn {
+    min-width: 70px;
+    height: 65px;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 12px;
+    color: var(--green);
+    font-weight: 800;
+}
+
+.vote-btn:hover {
+    background: var(--green);
+    color: white;
+}
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz {
+    background: #e9f5fa;
+}
+
+.quiz-box {
+    max-width: 800px;
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    margin: auto;
+    box-shadow: var(--shadow);
+}
+
+.quiz-question {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    display: grid;
+    gap: 10px;
+}
+
+.quiz-option {
+    border: 1px solid var(--border);
+    background: white;
+    padding: 15px;
+    text-align: left;
+    border-radius: 12px;
+}
+
+.quiz-option:hover {
+    border-color: var(--green);
+    background: var(--green-light);
+}
+
+#quizResult {
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   UNITY
+========================================================= */
+
+.unity {
+    padding: 90px 25px;
+    background:
+        linear-gradient(135deg, rgba(4,81,46,.95), rgba(7,126,164,.92));
+    color: white;
+    text-align: center;
+}
+
+.unity-inner {
+    max-width: 850px;
+    margin: auto;
+}
+
+.unity-symbol {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.unity h2 {
+    font-size: clamp(35px, 5vw, 58px);
+    margin-bottom: 20px;
+}
+
+.unity p {
+    font-size: 18px;
+    color: rgba(255,255,255,.86);
+}
+
+/* =========================================================
+   RESOURCES
+========================================================= */
+
+.resources {
+    background: #f2f6f4;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.resource {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+}
+
+.resource span {
+    font-size: 30px;
+}
+
+.resource h3 {
+    margin: 10px 0;
+}
+
+.resource p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #061f18;
+    color: white;
+    padding: 60px 25px 25px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+footer h3 {
+    margin-bottom: 15px;
+}
+
+footer p,
+footer li {
+    color: #a9c1b6;
+    font-size: 14px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin: 8px 0;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    text-align: center;
+    color: #78998b;
+    font-size: 12px;
+}
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #062c20;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    transform: translateY(120px);
+    transition: .3s;
+    z-index: 2000;
+}
+
+.toast.show {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width: 1000px) {
+
+    .disaster-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-container,
+    .prep-layout,
+    .idea-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        max-width: 650px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .track-grid,
+    .smart-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 700px) {
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        flex-direction: column;
+        display: none;
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-container {
+        padding: 70px 20px;
+    }
+
+    .hero-visual {
+        height: 360px;
+    }
+
+    .floating-card {
+        width: 150px;
+        padding: 12px;
+    }
+
+    .disaster-grid,
+    .track-grid,
+    .steps,
+    .smart-grid,
+    .honor-grid,
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .kit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .idea-item {
+        flex-direction: column;
+    }
+
+    .vote-btn {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#" class="logo">
+            <span class="logo-icon">🌱</span>
+            Jibon Suraksha Assam
+        </a>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#awareness">Awareness</a></li>
+            <li><a href="#students">Students</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#honor">Heroes</a></li>
+            <li><a href="#ideas">Ideas</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <div>
+
+            <div class="hero-badge">
+                🌿 Assam Natural Disaster Awareness Initiative
+            </div>
+
+            <h1>
+                Awareness Today.
+                <span>Resilience Tomorrow.</span>
+            </h1>
+
+            <p>
+                A community-driven platform for Assam to understand
+                natural disasters, prepare before emergencies,
+                celebrate local heroes and build smarter solutions together.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#awareness" class="btn btn-primary">
+                    Explore Awareness →
+                </a>
+
+                <a href="#ideas" class="btn btn-outline">
+                    💡 Share Your Solution
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="hero-card main-visual">
+
+                <div class="visual-content">
+
+                    <h3>Together, Assam Can Prepare.</h3>
+
+                    <p>
+                        Learn • Prepare • Respond • Recover • Rebuild
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card floating-card floating-one">
+
+                <div class="floating-number">01</div>
+
+                <strong>Know the Risk</strong>
+
+                <p>
+                    Understand the disasters that affect your community.
+                </p>
+
+            </div>
+
+
+            <div class="hero-card floating-card floating-two">
+
+                <div class="floating-number">02</div>
+
+                <strong>Act Together</strong>
+
+                <p>
+                    Community cooperation can save lives.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     AWARENESS
+===================================================== -->
+
+<section class="section" id="awareness">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Understand Assam
+            </div>
+
+            <h2 class="section-title">
+                Know the Natural Disasters Around Us
+            </h2>
+
+            <p class="section-description">
+                Assam's geography, rivers, hills and monsoon climate
+                create different kinds of natural hazards. Understanding
+                them is the first step toward preparedness.
+            </p>
+
+        </div>
+
+
+        <div class="disaster-grid">
+
+            <div class="disaster-card">
+
+                <div class="disaster-icon">🌊</div>
+
+                <h3>Flood</h3>
+
+                <p>
+                    Prepare for rising water, evacuation,
+                    safe drinking water and protecting documents.
+                </p>
+
+            </div>
+
+
+            <div class="disaster-card">
+
+                <div class="disaster-icon">🏚️</div>
+
+                <h3>Earthquake</h3>
+
+                <p>
+                    Learn Drop, Cover and Hold On,
+                    safe exits and earthquake-resistant practices.
+                </p>
+
+            </div>
+
+
+            <div class="disaster-card">
+
+                <div class="disaster-icon">⛰️</div>
+
+                <h3>Landslide</h3>
+
+                <p>
+                    Recognize warning signs around slopes,
+                    roads and vulnerable hill areas.
+                </p>
+
+            </div>
+
+
+            <div class="disaster-card">
+
+                <div class="disaster-icon">🌪️</div>
+
+                <h3>Storm</h3>
+
+                <p>
+                    Secure homes, follow warnings and
+                    stay away from dangerous structures.
+                </p>
+
+            </div>
+
+
+            <div class="disaster-card">
+
+                <div class="disaster-icon">🏞️</div>
+
+                <h3>River Erosion</h3>
+
+                <p>
+                    Understand changing riverbanks and
+                    community-based adaptation strategies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STUDENTS + ADULTS
+===================================================== -->
+
+<section class="section dual-section" id="students">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Two Learning Paths
+            </div>
+
+            <h2 class="section-title">
+                Learn Your Way
+            </h2>
+
+            <p class="section-description">
+                Different people need different kinds of information.
+                Choose the learning path designed for you.
+            </p>
+
+        </div>
+
+
+        <div class="track-tabs">
+
+            <button class="tab active" data-tab="studentTrack">
+                🎒 Student Hub
+            </button>
+
+            <button class="tab" data-tab="adultTrack">
+                🏠 Adult & Family Hub
+            </button>
+
+        </div>
+
+
+        <!-- STUDENT -->
+
+        <div class="track-content active" id="studentTrack">
+
+            <div class="track-grid">
+
+                <div class="info-card">
+
+                    <div class="big-icon">🧠</div>
+
+                    <h3>Learn the Basics</h3>
+
+                    <p>
+                        Understand floods, earthquakes, landslides,
+                        storms and erosion through simple explanations.
+                    </p>
+
+                    <ul class="action-list">
+                        <li>Know emergency numbers</li>
+                        <li>Identify safe places</li>
+                        <li>Learn evacuation routes</li>
+                        <li>Help younger children</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="big-icon">🎒</div>
+
+                    <h3>Student Emergency Kit</h3>
+
+                    <p>
+                        Create a small personal preparedness kit.
+                    </p>
+
+                    <ul class="action-list">
+                        <li>Water bottle</li>
+                        <li>Small first-aid kit</li>
+                        <li>Flashlight</li>
+                        <li>Emergency contact card</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="big-icon">🎮</div>
+
+                    <h3>Test Your Readiness</h3>
+
+                    <p>
+                        Take our quick disaster-awareness quiz
+                        and see how prepared you are.
+                    </p>
+
+                    <br>
+
+                    <a href="#quiz" class="btn btn-primary">
+                        Start Quiz
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADULT -->
+
+        <div class="track-content" id="adultTrack">
+
+            <div class="track-grid">
+
+                <div class="info-card">
+
+                    <div class="big-icon">🏠</div>
+
+                    <h3>Family Preparedness</h3>
+
+                    <p>
+                        Build a family emergency plan before
+                        the next emergency occurs.
+                    </p>
+
+                    <ul class="action-list">
+                        <li>Emergency contacts</li>
+                        <li>Meeting points</li>
+                        <li>Evacuation routes</li>
+                        <li>Important documents</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="big-icon">📦</div>
+
+                    <h3>Emergency Supplies</h3>
+
+                    <p>
+                        Keep essential supplies ready and
+                        review them regularly.
+                    </p>
+
+                    <ul class="action-list">
+                        <li>Safe drinking water</li>
+                        <li>Food supplies</li>
+                        <li>Medicine and first aid</li>
+                        <li>Battery-powered light</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="big-icon">📢</div>
+
+                    <h3>Warning & Communication</h3>
+
+                    <p>
+                        Follow official warnings and establish
+                        backup communication methods.
+                    </p>
+
+                    <ul class="action-list">
+                        <li>Monitor official alerts</li>
+                        <li>Keep phones charged</li>
+                        <li>Use emergency contacts</li>
+                        <li>Support vulnerable neighbours</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SURVIVAL STEPS
+===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Remember This
+            </div>
+
+            <h2 class="section-title">
+                Three Steps That Matter
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <span class="step-number">01</span>
+
+                <div class="step-icon">🧠</div>
+
+                <h3>Stay Informed</h3>
+
+                <p>
+                    Listen to official warnings and understand
+                    the risks affecting your area.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <span class="step-number">02</span>
+
+                <div class="step-icon">🛡️</div>
+
+                <h3>Protect Yourself</h3>
+
+                <p>
+                    Move to a safe location and follow
+                    appropriate emergency safety procedures.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <span class="step-number">03</span>
+
+                <div class="step-icon">🤝</div>
+
+                <h3>Help Others</h3>
+
+                <p>
+                    Support children, elderly people,
+                    persons with disabilities and neighbours.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SMART SOLUTIONS
+===================================================== -->
+
+<section class="section smart-section" id="solutions">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Future Ready Assam
+            </div>
+
+            <h2 class="section-title">
+                Smart Solutions for Disaster Resilience
+            </h2>
+
+            <p class="section-description">
+                Technology, local knowledge and community participation
+                can work together to reduce disaster risks.
+            </p>
+
+        </div>
+
+
+        <div class="smart-grid">
+
+            <div class="smart-card">
+
+                <div class="smart-icon">📡</div>
+
+                <h3>Smart Early Warning</h3>
+
+                <p>
+                    River-level sensors, rainfall monitoring,
+                    automated alerts and community warning systems
+                    can provide earlier information.
+                </p>
+
+            </div>
+
+
+            <div class="smart-card">
+
+                <div class="smart-icon">🤖</div>
+
+                <h3>AI & Data</h3>
+
+                <p>
+                    Data analysis can help identify vulnerable
+                    locations and improve disaster preparedness planning.
+                </p>
+
+            </div>
+
+
+            <div class="smart-card">
+
+                <div class="smart-icon">📱</div>
+
+                <h3>Offline Communication</h3>
+
+                <p>
+                    Community radio, mesh networks and offline
+                    communication plans can support people when
+                    conventional networks fail.
+                </p>
+
+            </div>
+
+
+            <div class="smart-card">
+
+                <div class="smart-icon">🌳</div>
+
+                <h3>Nature-Based Solutions</h3>
+
+                <p>
+                    Wetlands, forests, vegetation and healthy river
+                    ecosystems can contribute to long-term resilience.
+                </p>
+
+            </div>
+
+
+            <div class="smart-card">
+
+                <div class="smart-icon">🏗️</div>
+
+                <h3>Resilient Buildings</h3>
+
+                <p>
+                    Safer construction practices and appropriate
+                    structural improvements can reduce risk.
+                </p>
+
+            </div>
+
+
+            <div class="smart-card">
+
+                <div class="smart-icon">🗺️</div>
+
+                <h3>Digital Community Maps</h3>
+
+                <p>
+                    Communities can map shelters, vulnerable areas,
+                    safe routes, water points and important services.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PREPAREDNESS KIT
+===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="prep-layout">
+
+            <div>
+
+                <div class="section-label">
+                    Be Ready
+                </div>
+
+                <h2 class="section-title">
+                    Build Your Emergency Kit
+                </h2>
+
+                <p class="section-description">
+                    A simple emergency kit can help your family
+                    manage the first hours or days of an emergency.
+                </p>
+
+            </div>
+
+
+            <div class="prep-box">
+
+                <h3>Essential Items</h3>
+
+                <div class="kit-grid">
+
+                    <div class="kit-item">💧 Drinking Water</div>
+                    <div class="kit-item">🔦 Torch</div>
+                    <div class="kit-item">🩹 First Aid</div>
+                    <div class="kit-item">📻 Radio</div>
+                    <div class="kit-item">🔋 Batteries</div>
+                    <div class="kit-item">🍚 Food</div>
+                    <div class="kit-item">📄 Documents</div>
+                    <div class="kit-item">📱 Charged Phone</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WALL OF HONOR
+===================================================== -->
+
+<section class="section honor-section" id="honor">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Community Wall of Honor
+            </div>
+
+            <h2 class="section-title">
+                People Who Chose to Help
+            </h2>
+
+            <p class="section-description">
+                During difficult times, ordinary people often become
+                extraordinary examples of courage, kindness and unity.
+            </p>
+
+        </div>
+
+
+        <div class="honor-grid">
+
+            <article class="person-card">
+
+                <div class="person-photo">
+                    🤝
+                </div>
+
+                <div class="person-info">
+
+                    <small>COMMUNITY VOLUNTEER</small>
+
+                    <h3>Flood Relief Volunteers</h3>
+
+                    <p>
+                        Recognizing volunteers who helped distribute
+                        food, drinking water and essential supplies.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="person-card">
+
+                <div class="person-photo">
+                    🚤
+                </div>
+
+                <div class="person-info">
+
+                    <small>RESCUE SUPPORT</small>
+
+                    <h3>Local Rescue Teams</h3>
+
+                    <p>
+                        Appreciation for people who supported evacuation
+                        and rescue efforts in their communities.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="person-card">
+
+                <div class="person-photo">
+                    🍚
+                </div>
+
+                <div class="person-info">
+
+                    <small>COMMUNITY CARE</small>
+
+                    <h3>Food & Shelter Supporters</h3>
+
+                    <p>
+                        Honoring families, organizations and groups
+                        that opened their doors and shared resources.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     APPRECIATION
+===================================================== -->
+
+<section class="appreciation">
+
+    <div class="appreciation-content">
+
+        <div style="font-size:55px;">❤️</div>
+
+        <h2>
+            Thank You, Assam.
+        </h2>
+
+        <p>
+            To every person who offered food, shelter, transport,
+            medicine, time, courage or simply a helping hand —
+            this initiative is a tribute to you.
+        </p>
+
+        <div class="quote">
+            “When one neighbour helps another, a community becomes
+            stronger than any disaster.”
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     IDEA HUB
+===================================================== -->
+
+<section class="section" id="ideas">
+
+    <div class="container">
+
+        <div class="idea-layout">
+
+            <div class="idea-intro">
+
+                <div class="section-label">
+                    Community Idea Engine
+                </div>
+
+                <h2 class="section-title">
+                    Your Idea Could Help Assam
+                </h2>
+
+                <p class="section-description">
+                    Do you have a local solution for flooding,
+                    erosion, landslides, earthquakes or other
+                    disaster challenges?
+                </p>
+
+                <br>
+
+                <p>
+                    Share traditional knowledge, community practices,
+                    technology ideas, school projects or simple
+                    solutions that could make your area safer.
+                </p>
+
+                <br>
+
+                <strong>
+                    💡 Every good solution starts with an idea.
+                </strong>
+
+            </div>
+
+
+            <form class="idea-form" id="ideaForm">
+
+                <h3>Submit Your Solution</h3>
+
+                <br>
+
+                <div class="form-group">
+
+                    <label>Your Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Disaster Type</label>
+
+                    <select id="disaster" required>
+
+                        <option value="">
+                            Select disaster
+                        </option>
+
+                        <option>Flood</option>
+                        <option>Earthquake</option>
+                        <option>Landslide</option>
+                        <option>River Erosion</option>
+                        <option>Storm</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Your Solution</label>
+
+                    <textarea
+                        id="solution"
+                        placeholder="Describe your idea..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="upload-box">
+
+                    📷 Add a Photo
+
+                    <input
+                        type="file"
+                        id="photo"
+                        accept="image/*"
+                    >
+
+                    <img id="photoPreview">
+
+                </div>
+
+
+                <button class="btn btn-primary" type="submit">
+                    🚀 Submit Idea
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="idea-list" id="ideaList">
+
+            <h3>Community Ideas</h3>
+
+            <br>
+
+            <div class="idea-item">
+
+                <div>
+
+                    <span class="idea-tag">FLOOD</span>
+
+                    <h3>Community Water-Level Board</h3>
+
+                    <p>
+                        Create visible water-level markers near
+                        vulnerable community locations.
+                    </p>
+
+                    <small>
+                        Shared by: Community Member
+                    </small>
+
+                </div>
+
+                <button class="vote-btn" onclick="vote(this)">
+                    ▲
+                    <br>
+                    <span>12</span>
+                </button>
+
+            </div>
+
+
+            <div class="idea-item">
+
+                <div>
+
+                    <span class="idea-tag">EARTHQUAKE</span>
+
+                    <h3>School Emergency Practice Days</h3>
+
+                    <p>
+                        Organize regular school drills so students
+                        know what to do during an earthquake.
+                    </p>
+
+                    <small>
+                        Shared by: Student Volunteer
+                    </small>
+
+                </div>
+
+                <button class="vote-btn" onclick="vote(this)">
+                    ▲
+                    <br>
+                    <span>19</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     QUIZ
+===================================================== -->
+
+<section class="section quiz" id="quiz">
+
+    <div class="container">
+
+        <div class="section-header" style="margin:auto auto 35px; text-align:center;">
+
+            <div class="section-label">
+                Student Challenge
+            </div>
+
+            <h2 class="section-title">
+                Test Your Disaster Readiness
+            </h2>
+
+        </div>
+
+
+        <div class="quiz-box">
+
+            <div class="quiz-question">
+                During an earthquake, what should you do first?
+            </div>
+
+            <div class="quiz-options">
+
+                <button
+                    class="quiz-option"
+                    onclick="checkAnswer(this, false)"
+                >
+                    🏃 Run outside immediately
+                </button>
+
+                <button
+                    class="quiz-option"
+                    onclick="checkAnswer(this, true)"
+                >
+                    🛡️ Drop, Cover and Hold On
+                </button>
+
+                <button
+                    class="quiz-option"
+                    onclick="checkAnswer(this, false)"
+                >
+                    🪟 Stand beside a window
+                </button>
+
+                <button
+                    class="quiz-option"
+                    onclick="checkAnswer(this, false)"
+                >
+                    🛗 Use the elevator
+                </button>
+
+            </div>
+
+            <div id="quizResult"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     UNITY
+===================================================== -->
+
+<section class="unity">
+
+    <div class="unity-inner">
+
+        <div class="unity-symbol">
+            🤝
+        </div>
+
+        <h2>
+            Unity Is Our Strongest Safety Net.
+        </h2>
+
+        <p>
+            Disaster resilience is not only about technology.
+            It is about people helping people — neighbours checking
+            on neighbours, students learning, families preparing,
+            volunteers serving and communities rebuilding together.
+        </p>
+
+        <br>
+
+        <strong>
+            একেলগে আমি পাৰোঁ। • Together, We Can.
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RESOURCES
+===================================================== -->
+
+<section class="section resources" id="resources">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-label">
+                Quick Resources
+            </div>
+
+            <h2 class="section-title">
+                Be Ready Before You Need Help
+            </h2>
+
+            <p class="section-description">
+                Keep your local emergency contacts, official alerts,
+                shelters and family emergency information accessible.
+            </p>
+
+        </div>
+
+
+        <div class="resource-grid">
+
+            <div class="resource">
+
+                <span>📞</span>
+
+                <h3>Emergency Contacts</h3>
+
+                <p>
+                    Keep verified emergency numbers saved
+                    on every family member's phone.
+                </p>
+
+            </div>
+
+
+            <div class="resource">
+
+                <span>🏫</span>
+
+                <h3>Safe Locations</h3>
+
+                <p>
+                    Identify schools, community buildings
+                    and designated safe areas near you.
+                </p>
+
+            </div>
+
+
+            <div class="resource">
+
+                <span>📢</span>
+
+                <h3>Official Alerts</h3>
+
+                <p>
+                    Follow verified government and disaster
+                    management updates.
+                </p>
+
+            </div>
+
+
+            <div class="resource">
+
+                <span>❤️</span>
+
+                <h3>Volunteer</h3>
+
+                <p>
+                    Participate in responsible community
+                    preparedness and relief activities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>🌱 Jibon Suraksha Assam</h3>
+
+            <p>
+                A community awareness concept designed to help
+                students, families and communities understand
+                natural disaster risks and prepare together.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Explore</h3>
+
+            <ul>
+                <li>Disaster Awareness</li>
+                <li>Student Hub</li>
+                <li>Smart Solutions</li>
+                <li>Community Heroes</li>
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Community</h3>
+
+            <ul>
+                <li>Submit an Idea</li>
+                <li>Share an Initiative</li>
+                <li>Volunteer Stories</li>
+                <li>Wall of Honor</li>
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>Remember</h3>
+
+            <ul>
+                <li>Stay Informed</li>
+                <li>Prepare Early</li>
+                <li>Help Others</li>
+                <li>Stay United</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Jibon Suraksha Assam • Awareness • Preparedness • Unity
+
+    </div>
+
+</footer>
+
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+    Your idea has been added to the community wall! 🎉
+</div>
+
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+});
+
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+    });
+
+});
+
+
+/* =========================================================
+   STUDENT / ADULT TABS
+========================================================= */
+
+const tabs = document.querySelectorAll(".tab");
+const tracks = document.querySelectorAll(".track-content");
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        tabs.forEach(t => t.classList.remove("active"));
+
+        tracks.forEach(track => {
+            track.classList.remove("active");
+        });
+
+        tab.classList.add("active");
+
+        document
+            .getElementById(tab.dataset.tab)
+            .classList.add("active");
+
+    });
+
+});
+
+
+/* =========================================================
+   PHOTO PREVIEW
+========================================================= */
+
+const photoInput = document.getElementById("photo");
+const photoPreview = document.getElementById("photoPreview");
+
+photoInput.addEventListener("change", function() {
+
+    const file = this.files[0];
+
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+
+        photoPreview.src = e.target.result;
+        photoPreview.style.display = "block";
+
+    };
+
+    reader.readAsDataURL(file);
+
+});
+
+
+/* =========================================================
+   COMMUNITY IDEA FORM
+========================================================= */
+
+const ideaForm = document.getElementById("ideaForm");
+const ideaList = document.getElementById("ideaList");
+const toast = document.getElementById("toast");
+
+ideaForm.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const disaster = document.getElementById("disaster").value;
+    const solution = document.getElementById("solution").value;
+
+    const item = document.createElement("div");
+
+    item.className = "idea-item";
+
+    item.innerHTML = `
+
+        <div>
+
+            <span class="idea-tag">
+                ${disaster.toUpperCase()}
+            </span>
+
+            <h3>
+                Community Solution
+            </h3>
+
+            <p>
+                ${solution}
+            </p>
+
+            <small>
+                Shared by: ${name}
+            </small>
+
+        </div>
+
+        <button class="vote-btn" onclick="vote(this)">
+            ▲
+            <br>
+            <span>0</span>
+        </button>
+
+    `;
+
+    ideaList.appendChild(item);
+
+    ideaForm.reset();
+
+    photoPreview.style.display = "none";
+
+    showToast();
+
+});
+
+
+/* =========================================================
+   VOTING
+========================================================= */
+
+function vote(button) {
+
+    const number = button.querySelector("span");
+
+    let count = Number(number.textContent);
+
+    count++;
+
+    number.textContent = count;
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast() {
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    }, 3000);
+
+}
+
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+function checkAnswer(button, correct) {
+
+    const result = document.getElementById("quizResult");
+
+    document.querySelectorAll(".quiz-option").forEach(option => {
+
+        option.style.background = "white";
+        option.style.borderColor = "var(--border)";
+
+    });
+
+
+    if (correct) {
+
+        button.style.background = "#dff5e9";
+        button.style.borderColor = "#087443";
+
+        result.style.color = "#087443";
+
+        result.textContent =
+            "✓ Correct! Drop, Cover and Hold On is the recommended response during an earthquake.";
+
+    } else {
+
+        button.style.background = "#ffe5e4";
+        button.style.borderColor = "#d9534f";
+
+        result.style.color = "#d9534f";
+
+        result.textContent =
+            "✗ Not quite. Think about how you can protect yourself from falling objects.";
+
+    }
+
+}
+
+
+/* =========================================================
+   SIMPLE SCROLL ANIMATION
+========================================================= */
+
+const observer = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+
+    { threshold: 0.1 }
+
+);
+
+
+document
+    .querySelectorAll(".disaster-card, .info-card, .smart-card, .person-card, .resource")
+    .forEach(card => {
+
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        card.style.transition = "opacity .6s ease, transform .6s ease";
+
+        observer.observe(card);
+
+    });
+
+</script>
+
+</body>
+</html>
