@@ -65,23 +65,6 @@
 # # for i in range(1, 7):
 # #     print(" " * (6 - i) + "*" * (2 * i - 1))
 
-# score = 0
-# for i in range(1, 101):
-#     score = i
-#     print(score)
-
-# if score >= 90:
-#     print("Grade: A")
-# elif score >= 80:
-#     print("Grade: B")
-# elif score >= 70:
-#     print("Grade: C")
-# elif score >= 60:
-#     print("Grade: D")
-# elif score >= 50:
-#     print("Grade: E")
-# else:
-#     print("Grade: F")
 
 # number = int(input("Enter a number: "))
 # if number % 2 == 0:
@@ -89,8 +72,43 @@
 # else:
 #     print(number, "is an odd number")
 
-year = int(input("Enter a year: "))
-if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-    print(year, "is a leap year")
-else:
-    print(year, "is not a leap year")
+# year = int(input("Enter a year: "))
+# if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+#     print(year, "is a leap year")
+# else:
+#     print(year, "is not a leap year")
+
+
+# score = 0
+# for i in range(1, 101):
+#     score = i
+#     if score >= 90:
+#         print( "Your score:", score, "Grade: A")
+#     elif score >= 80:
+#         print( "Your score:", score, "Grade: B")
+#     elif score >= 70:
+#         print( "Your score:", score, "Grade: C")
+#     elif score >= 60:
+#         print( "Your score:", score, "Grade: D")
+#     elif score >= 50:
+#         print( "Your score:", score, "Grade: E")
+#     else:
+#         print( "Your score:", score, "Grade: F")
+
+# print("Check the score and grade criteria above ---^ ")
+# print("Check your score and grade below ---v ")
+# score = int(input("Enter your score: "))
+# if score >= 90:
+#         print( "Your score:", score, "Grade: A")
+# elif score >= 80:
+#         print( "Your score:", score, "Grade: B")
+# elif score >= 70:
+#         print( "Your score:", score, "Grade: C")
+# elif score >= 60:
+#         print( "Your score:", score, "Grade: D")
+# elif score >= 50:
+#         print( "Your score:", score, "Grade: E")
+# else:
+#         print( "Your score:", score, "Grade: F")
+
+
