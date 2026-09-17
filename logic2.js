@@ -103,10 +103,10 @@ let jsk = "";
    if(temp<20){
       jsk = "Cold";
    }
-   if(temp>20 && temp<30){
+   else if(temp>20 && temp<30){
       jsk = "Normal";
    }
-   if(temp>30){
+   else{
       jsk = "Hot";
    }
 return jsk;
