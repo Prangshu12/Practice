@@ -33,7 +33,6 @@ greet = "hello " + name
 print(greet)
 print(greet[0:15])
 
-<<<<<<< HEAD
 # # # # student = {
 # # # #     "name": "Prangshu",
 # # # #     "age": 20,
@@ -113,15 +112,3 @@ print(greet[0:15])
 #         print( "Your score:", score, "Grade: F")
 
 
-=======
-student = {
-    "name": "Prangshu",
-    "age": 20,
-    "grade": "A"
-}
-print(student)
-print(student["name"])
-student["age"] = 21
-print(student)
-Full_name = "Prangshu Pranjal Saikia"
->>>>>>> parent of bd7578e (4th)
