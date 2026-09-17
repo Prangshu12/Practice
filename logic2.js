@@ -72,16 +72,16 @@
 // console.log(getStatus(616));
 
 
-function temprature(temp){
-let jsk = "no infomation";
-   if(temp<20){
-      jsk = "Cold";
-   }
-   if(temp>20 && temp){
-      jsk = "Cold";
-   }
-   if(temp)
-}
+// function temprature(temp){
+// let jsk = "no infomation";
+//    if(temp<20){
+//       jsk = "Cold";
+//    }
+//    if(temp>20 && temp){
+//       jsk = "Cold";
+//    }
+//    if(temp)
+// }
 
 
 
