@@ -72,21 +72,54 @@
 // console.log(getStatus(616));
 
 
-// function temprature(temp){
-// let jsk = "no infomation";
-//    if(temp<20){
-//       jsk = "Cold";
-//    }
-//    if(temp>20 && temp){
-//       jsk = "Cold";
-//    }
-//    if(temp)
-// }
+// ### Temperature Checker
 
-function add(a,b){
-   console.log(a+b);
+// (DATE - 17/09/2026)
+
+// Create a function:
+
+// ```jsx
+// checkTemperature(temperature)
+// ```
+
+// The function should return:
+
+// - `"Cold"` if temperature is below 20
+// - `"Normal"` if temperature is between 20 and 30
+// - `"Hot"` if temperature is above 30
+
+// ### Extra Challenge
+
+// Create a variable **inside the function**:
+
+// ```jsx
+// let message = " " ;
+// ```
+
+// Use that variable to store the result before returning it.
+
+function temprature(temp){
+let jsk = "";
+   if(temp<20){
+      jsk = "Cold";
+   }
+   if(temp>20 && temp<30){
+      jsk = "Normal";
+   }
+   if(temp>30){
+      jsk = "Hot";
+   }
+return jsk;
 }
-add(10,20);
+console.log(temprature(49));
+
+
+
+
+// function add(a,b){
+//    console.log(a+b);
+// }
+// add(10,20);
 
 
 
